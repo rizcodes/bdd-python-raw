@@ -8,8 +8,9 @@ class CovidVaccine:
     def fast_track_user(self):
         if self.is_elder():
             return 'user issued fast-track pass'
+        return None
 
     def administer_shot(self):
         if self.is_elder() and self.fast_track_user():
             return f'Administering COVID vaccine'
-        return f'User is not elder - please wait for your turn'
+        return f'Please wait for your turn'

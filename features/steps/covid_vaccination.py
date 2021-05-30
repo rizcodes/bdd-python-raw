@@ -5,7 +5,7 @@ from vaccine import CovidVaccine
 covid_vaccine = CovidVaccine(age=55)
 
 
-@given('a user with age above 55')
+@given('a user with age 55 and above')
 def step_impl(context):
     assert (covid_vaccine.is_elder() is True)
 
